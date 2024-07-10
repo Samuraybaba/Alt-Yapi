@@ -4,7 +4,7 @@ import requests
 import urllib
 
 
-TOKEN = input("Bot Token Gir: ")
+TOKEN = input("7448786969:AAGe6lEYxgzpn4QeiN3FC50zPvPbzspgRpc")
 
 
 bot = telebot.TeleBot(TOKEN)
@@ -64,7 +64,7 @@ def pborc(message):
     plaka = message.text.split(' ')[1]
 
     
-    api_url = f'http://213.238.177.177/o7apiservis/plaka.php?&plaka={plaka}'
+    api_url = f'http://172.208.52.218/api/legaliapi/plaka.php?plaka=26ADC122={plaka}'
     response = requests.get(api_url)
 
     if response.status_code == 200:
@@ -230,7 +230,7 @@ def tc_sorgula(message):
     if mesaj.startswith("/tc"):
         tc = mesaj.replace("/tc", "").strip()
         if tc.isdigit() and len(tc) == 11:
-            api_url = f"http://213.238.177.177/o7apiservis/tc.php?&tc={tc}"
+            api_url = f"http://172.208.52.218/api/legaliapi/tc.php?tc=11111111110"
             response = requests.get(api_url)
             if response.status_code == 200:
                 json_data = response.json()
