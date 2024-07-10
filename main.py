@@ -230,7 +230,7 @@ def tc_sorgula(message):
     if mesaj.startswith("/tc"):
         tc = mesaj.replace("/tc", "").strip()
         if tc.isdigit() and len(tc) == 11:
-            api_url = f"http://172.208.52.218/api/legaliapi/tc.php?tc=11111111110"
+            api_url = f"http://172.208.52.218/api/legaliapi/tc.php?tc={tc}"
             response = requests.get(api_url)
             if response.status_code == 200:
                 json_data = response.json()
